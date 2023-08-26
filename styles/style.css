@@ -1,0 +1,165 @@
+:root {
+  --bottom-margin: 3rem;
+  --font-family: "Ubuntu", sans-serif;
+  --hover-color: #4a90ad;
+  --light-color: aliceblue;
+  --primary-color: #191f3c;
+  --secondary-color: #07859f;
+  --shadow-color: rgba(0, 0, 0, 0.333);
+  --viewport-height: calc(100vh - var(--bottom-margin));
+}
+
+* {
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+html {
+  color: var(--light-color);
+  position: relative;
+}
+
+body {
+  background-image: url("../assets/img/Mesa\ de\ trabajo\ 3\ copia\ 3@3xa-min-small.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  margin-bottom: var(--bottom-margin);
+  min-height: var(--viewport-height);
+
+  @media (max-width: 600px) {
+    background-image: none;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgb(10, 6, 94) 41%,
+      rgb(1, 46, 90) 100%
+    );
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 2rem 1rem 1rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 601px) {
+    display: none;
+  }
+}
+
+.img-logo {
+  width: 16rem;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 601px) {
+    margin: 20rem 1rem 0;
+  }
+}
+
+.main-contact-us {
+  align-items: center;
+  display: flex;
+}
+
+.main-contact-us__text {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.contact-info {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.contact-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-button {
+  margin: 1rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+input,
+textarea {
+  border-radius: 1rem;
+  border: none;
+  margin: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  width: 17rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: var(--secondary-color);
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 3px var(--shadow-color);
+  color: var(--light-color);
+  padding: 0.5rem;
+  transition: all 200ms;
+}
+
+.submit-button:hover {
+  background-color: var(--hover-color);
+  box-shadow: 5px 5px 8px var(--shadow-color);
+  cursor: pointer;
+}
+
+.link {
+  color: var(--light-color);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 200ms;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  background-size: 100% 2px;
+  transition: all 200ms;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  bottom: 0;
+  height: var(--bottom-margin);
+  position: absolute;
+  width: 100%;
+}
+
+.footer-flex {
+  align-items: center;
+  box-shadow: 0 -3px 5px var(--shadow-color);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}

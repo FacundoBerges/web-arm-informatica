@@ -22,6 +22,7 @@ html {
 body {
   background-image: url("../assets/img/Mesa\ de\ trabajo\ 3\ copia\ 3@3xa-min-small.png");
   background-position: top;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: var(--bottom-margin);
   min-height: var(--viewport-height);
@@ -73,6 +74,12 @@ body {
   display: flex;
 }
 
+.whatsapp-img {
+  @media (max-width: 315px) {
+    display: none;
+  }
+}
+
 .main-contact-us__text {
   font-size: 1.5rem;
   padding: 0 0.5rem;
@@ -93,6 +100,10 @@ body {
 .form-field {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 415px) {
+    flex-direction: column;
+  }
 }
 
 .form-button {
